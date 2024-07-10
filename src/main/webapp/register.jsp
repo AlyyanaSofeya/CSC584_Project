@@ -70,7 +70,7 @@
         <form action="register" method="post">
             <div class="form-group">
                 <label for="name">Name:</label>
-                <input type="text"    id="name" name="name" required>
+                <input type="text"id="name" name="name" required>
             </div>
             <div class="form-group">
                 <label for="phoneNumber">Phone Number:</label>
