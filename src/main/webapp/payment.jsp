@@ -63,7 +63,7 @@
 <div class=paymentForm>
 <div class="container">
     <div class="column">
-        <form action="payment" method="post">
+        <form action="paymentController" method="get">
             <label>Delivery Type :</label>
             <input type="radio" id="standardDelivery" name="deliveryType" value="standard" onclick="toggleDeliveryForm()"> Standard Delivery
             <input type="radio" id="inStorePickup" name="deliveryType" value="inStore" onclick="toggleDeliveryForm()"> In-Store Pickup
