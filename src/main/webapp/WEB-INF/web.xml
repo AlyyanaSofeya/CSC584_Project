@@ -38,5 +38,15 @@
   <servlet-mapping>
     <servlet-name>controllerContact</servlet-name>
     <url-pattern>/controllerContact</url-pattern>
+      </servlet-mapping>
+       <servlet>
+    <description></description>
+    <display-name>cartServlet</display-name>
+    <servlet-name>cartServlet</servlet-name>
+    <servlet-class>Order.cartServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>cartServlet</servlet-name>
+    <url-pattern>/cartServlet</url-pattern>
   </servlet-mapping>
 </web-app>
