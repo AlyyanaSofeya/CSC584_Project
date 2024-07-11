@@ -1,7 +1,9 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
 <!DOCTYPE html>
-<html lang="en">
-   <head>
-      <!-- basic -->
+<html>
+<head>
+<!-- basic -->
       <meta charset="utf-8">
       <meta http-equiv="X-UA-Compatible" content="IE=edge">
       <!-- mobile metas -->
@@ -15,7 +17,7 @@
       <!-- bootstrap css -->
       <link rel="stylesheet" href="css/bootstrap.min.css">
       <!-- style css -->
-      <link rel="stylesheet" href="css/style.css">
+      <link rel="stylesheet" href="css/style1.css">
       <!-- Responsive-->
       <link rel="stylesheet" href="css/responsive.css">
       <!-- fevicon -->
@@ -25,10 +27,11 @@
       <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
-   </head>
-   <!-- body -->
-   <body class="main-layout inner_page">
-      <!-- loader  -->
+<meta charset="UTF-8">
+<title>Contact Us Page</title>
+</head>
+<body class="main-layout inner_page">
+<!-- loader  -->
       <div class="loader_bg">
          <div class="loader"><img src="images/loading.gif" alt="#"/></div>
       </div>
@@ -94,10 +97,10 @@
                   </div>
                </div>
                <div class="col-md-10 offset-md-1 ">
-                  <form id="request" class="main_form" action="contact_us" method=post>
+                  <form class="main_form" action="ControllerContactUs" method="get">
                      <div class="row">
                         <div class="col-md-6 ">
-                           <input class="contactus" placeholder="Full Name" type=text name=" Name"> 
+                           <input class="contactus" placeholder="Full Name" type=text name="Name"> 
                         </div>
                         <div class="col-md-6">
                            <input class="contactus" placeholder="Email" type=text name="Email">                          
@@ -106,10 +109,10 @@
                            <input class="contactus" placeholder="Phone Number" type=text name="Phone Number">                          
                         </div>
                         <div class="col-md-6">
-                           <textarea class="textarea" placeholder="Message" rows=4 cols=4></textarea>
+                           <textarea class="textarea" name="message" id=message placeholder="Message" rows=4 cols=4></textarea>
                         </div>
                         <div class="col-md-12">
-                           <button class="send_btn">Send</button>
+                           <input type=submit class="send_btn" value=Send>
                         </div>
                      </div>
                   </form>
@@ -197,5 +200,5 @@
       <script src="js/jquery-3.0.0.min.js"></script>
       <!-- sidebar -->
       <script src="js/custom.js"></script>
-   </body>
+</body>
 </html>
