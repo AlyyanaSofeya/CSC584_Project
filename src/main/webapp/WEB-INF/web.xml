@@ -19,4 +19,14 @@
     <welcome-file>default.htm</welcome-file>
     <welcome-file>default.jsp</welcome-file>
   </welcome-file-list>
+  <servlet>
+    <description></description>
+    <display-name>cartServlet</display-name>
+    <servlet-name>cartServlet</servlet-name>
+    <servlet-class>Order.cartServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>cartServlet</servlet-name>
+    <url-pattern>/cartServlet</url-pattern>
+  </servlet-mapping>
 </web-app>
