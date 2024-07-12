@@ -46,7 +46,7 @@
                         <p><strong>Biscoff Buttercookies</strong> - RM 32.00</p>
                         <p>Delicious cookies with a rich, caramelized taste of Biscoff.</p>
                         <form action="CartOrderServlet" method="post" class="product-form">
-                            <input type="hidden" name="product" value="Biscoff Buttercookies">
+                            <input type="hidden" name="product" value="Biscofff Buttercookies">
                             <input type="hidden" name="action" value="add">
                             <div class="form-group">
                                 <label for="quantityBiscoff">Quantity:</label>
