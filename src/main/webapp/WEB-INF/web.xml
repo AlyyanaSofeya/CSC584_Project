@@ -21,6 +21,26 @@
   </welcome-file-list>
   <servlet>
     <description></description>
+    <display-name>contactUs</display-name>
+    <servlet-name>contactUs</servlet-name>
+    <servlet-class>contactUs</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>contactUs</servlet-name>
+    <url-pattern>/contactUs</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>controllerContact</display-name>
+    <servlet-name>controllerContact</servlet-name>
+    <servlet-class>paymentServlet.controllerContact</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>controllerContact</servlet-name>
+    <url-pattern>/controllerContact</url-pattern>
+      </servlet-mapping>
+       <servlet>
+    <description></description>
     <display-name>cartServlet</display-name>
     <servlet-name>cartServlet</servlet-name>
     <servlet-class>Order.cartServlet</servlet-class>

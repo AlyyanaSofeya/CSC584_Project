@@ -1,4 +1,5 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8" 
+	pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -33,6 +34,8 @@
         deliveryFormElements.forEach(function(element) {
             element.disabled = !standardDelivery;
         });
+        
+        toggleCashPaymentOption();
     }
 
     function toggleBankOptions() {
@@ -41,10 +44,18 @@
 
         bankOptions.style.display = onlineBanking ? "block" : "none";
     }
+    
+    function toggleCashPaymentOption() {
+        var inStorePickup = document.getElementById("inStorePickup").checked;
+        var cashPaymentOption = document.getElementById("cashPayment");
+
+        cashPaymentOption.disabled = !inStorePickup;
+    }
 
     window.onload = function() {
         toggleDeliveryForm(); // Set initial state based on the selected radio button
         toggleBankOptions(); // Set initial state based on the selected payment type
+        toggleCashPaymentOption();
     }
 </script>
 </head>
@@ -52,7 +63,7 @@
 <div class=paymentForm>
 <div class="container">
     <div class="column">
-        <form action="payment" method="post">
+        <form action="paymentController" method="get">
             <label>Delivery Type :</label>
             <input type="radio" id="standardDelivery" name="deliveryType" value="standard" onclick="toggleDeliveryForm()"> Standard Delivery
             <input type="radio" id="inStorePickup" name="deliveryType" value="inStore" onclick="toggleDeliveryForm()"> In-Store Pickup
@@ -71,7 +82,8 @@
                 </div>
                 <h2>Payment</h2>
             <label>Payment Type :</label>
-            <input type="radio" id="onlineBanking" name="paymentType" value="onlineBanking" onclick="toggleBankOptions()"> Online Banking<br>
+            <input type="radio" id="onlineBanking" name="paymentType" value="onlineBanking" onclick="toggleBankOptions()"> Online Banking
+            <input type="radio" id="cashPayment" name="paymentType" value="cashPayment" > Cash Payment
             <div id=bankOptions>
             <br>
             <label for="bank">Choose your bank:</label>
