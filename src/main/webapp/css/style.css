@@ -30,9 +30,9 @@
 
 /*--------------------------------------------------------------------- skeleton ---------------------------------------------------------------------*/
 
-* {
+/* * {
      box-sizing: border-box !important;
-}
+} */
 
 section{
     padding:3rem 9%;
@@ -42,9 +42,9 @@ section{
      max-width: 1170px;
 } 
 
-html {
+/* html {
      scroll-behavior: smooth;
-}
+} */
 
 body {
      color: #fff;
@@ -109,13 +109,13 @@ h6 {
      font-size: 13px
 }
 
-*,
+/* *,
 *::after,
 *::before {
      -webkit-box-sizing: border-box;
      -moz-box-sizing: border-box;
      box-sizing: border-box;
-}
+} */
 
 h1 a,
 h2 a,
@@ -1035,7 +1035,7 @@ section{
 
 /** quality **/
 
-.quality {
+/* .quality {
      padding-top: 90px;
 }
 
@@ -1069,7 +1069,7 @@ section{
 .quality .read_more {
      margin: 0 auto;
      margin-top: 30px !important;
-}
+} */
 
 
 /** end quality **/
@@ -1144,7 +1144,7 @@ section{
 
 /** honey_bg **/
 
-.honey_bg {
+/* .honey_bg {
      margin: 0 auto;
      display: block;
 }
@@ -1157,7 +1157,7 @@ section{
      margin: 0 auto;
      display: block;
 }
-
+ */
 
 /** end honey_bg **/
 
@@ -1436,8 +1436,12 @@ section{
 }
 
 .heading{
+
     background: url("img/abtus.jpg") no-repeat;
  
+
+    background: url("images/homeBG.jpg") no-repeat;
+
     background-size:cover;
     background-position: center;
     text-align: center;
@@ -1537,9 +1541,10 @@ section{
     }
 }
 
+/* for home bckground */
 .home{
     padding-top: 14rem;
-    background: url(img/home-bg1.jpg) no-repeat;
+    background: url(images/headerBG.jpg) no-repeat;
     background-size: cover;
     background-position: center;
     position: relative;
@@ -1565,6 +1570,7 @@ section{
     font-size:2.5rem;
 }
 
+/* havetoCakeLicious */
 .home .slides-container .slide .content h3{
     font-size:6rem;
     color: #222;
