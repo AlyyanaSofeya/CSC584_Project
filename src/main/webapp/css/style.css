@@ -1089,10 +1089,10 @@ section{
     }
 }
 
-/* for aboutus and so on bckground */
+/* for home bckground */
 .home{
     padding-top: 14rem;
-    background: url(img/homeBG.jpg) no-repeat;
+    background: url(images/headerBG.jpg) no-repeat;
     background-size: cover;
     background-position: center;
     position: relative;
