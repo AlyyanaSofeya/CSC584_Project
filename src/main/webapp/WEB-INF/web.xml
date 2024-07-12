@@ -6,10 +6,6 @@
     <servlet-name>paymentController</servlet-name>
     <servlet-class>paymentServlet.paymentController</servlet-class>
   </servlet>
-  <servlet-mapping>
-    <servlet-name>paymentController</servlet-name>
-    <url-pattern>/paymentController</url-pattern>
-  </servlet-mapping>
   <display-name>FinalProject</display-name>
   <welcome-file-list>
     <welcome-file>index.html</welcome-file>

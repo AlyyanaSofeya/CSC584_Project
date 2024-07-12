@@ -10,7 +10,6 @@ import java.io.IOException;
 
 public class paymentController extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-
     public paymentController () {
         super();
         // TODO Auto-generated constructor stub
