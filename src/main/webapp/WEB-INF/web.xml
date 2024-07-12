@@ -31,14 +31,14 @@
     <servlet-name>ControllerContactUs</servlet-name>
     <servlet-class>paymentServlet.ControllerContactUs</servlet-class>
   </servlet>
-       <servlet>
+  <servlet>
     <description></description>
-    <display-name>cartServlet</display-name>
-    <servlet-name>cartServlet</servlet-name>
-    <servlet-class>Order.cartServlet</servlet-class>
+    <display-name>CartOrderServlet</display-name>
+    <servlet-name>CartOrderServlet</servlet-name>
+    <servlet-class>Order.CartOrderServlet</servlet-class>
   </servlet>
   <servlet-mapping>
-    <servlet-name>cartServlet</servlet-name>
-    <url-pattern>/cartServlet</url-pattern>
+    <servlet-name>CartOrderServlet</servlet-name>
+    <url-pattern>/CartOrderServlet</url-pattern>
   </servlet-mapping>
 </web-app>

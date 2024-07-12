@@ -10,6 +10,7 @@ import java.io.IOException;
 
 public class paymentController extends HttpServlet {
 	private static final long serialVersionUID = 1L;
+	
     public paymentController () {
         super();
         // TODO Auto-generated constructor stub
@@ -17,8 +18,7 @@ public class paymentController extends HttpServlet {
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		response.getWriter().append("Served at: ").append(request.getContextPath());
-		doGet(request, response);
+		response.setContentType("text/html");
 		int bank=Integer.parseInt(request.getParameter("bank"));
 		if(bank==1) {
 			RequestDispatcher rd=request.getRequestDispatcher("bsn.jsp");
@@ -34,9 +34,6 @@ public class paymentController extends HttpServlet {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
 	
-			
-		
-		
-
-}
+		doGet(request, response);
+	}
 }

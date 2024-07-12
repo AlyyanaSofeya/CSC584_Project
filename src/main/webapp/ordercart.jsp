@@ -112,7 +112,7 @@
             <div class="row">
                 <div class="col-md-6">
                     <h3>Place Your Order</h3>
-                    <form action="CartServlet" method="post">
+                    <form action="CartOrderServlet" method="post">
                         <div class="form-group">
                             <label for="product">Product:</label>
                             <select id="product" name="product" class="form-control">
