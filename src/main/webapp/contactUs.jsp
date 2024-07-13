@@ -17,7 +17,7 @@
       <!-- bootstrap css -->
       <link rel="stylesheet" href="css/bootstrap.min.css">
       <!-- style css -->
-      <link rel="stylesheet" href="css/style1.css">
+      <link rel="stylesheet" href="css/style.css">
       <!-- Responsive-->
       <link rel="stylesheet" href="css/responsive.css">
       <!-- fevicon -->
@@ -45,7 +45,7 @@
                      <div class="full">
                         <div class="center-desk">
                            <div class="logo">
-                              <a href="index.html"><img src="images/logo1.png" alt="#"/></a>
+                              
                            </div>
                         </div>
                      </div>
