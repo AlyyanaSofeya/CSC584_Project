@@ -9,11 +9,11 @@
         font-family: Arial, sans-serif;
         margin: 0;
         padding: 0;
-        background-color: #C04000;
+        background-color: #F0F0F0;
     }
 
     header {
-        background-color: #834333;
+        background-color: #8B4513;
         color: white;
         padding: 20px;
         text-align: center;
@@ -44,7 +44,7 @@
     }
 
     main {
-        padding: 40px 20px;
+        padding: 20px;
         max-width: 1000px;
         margin: 0 auto;
     }
@@ -71,16 +71,16 @@
     }
 
     th {
-        background-color: #f2f2f2;
+        background-color: #FFA07A;
         font-weight: bold;
     }
 
     tr:nth-child(even) {
-        background-color: #f9f9f9;
+        background-color: #FFF5EE;
     }
 
     tr:hover {
-        background-color: #f1f1f1;
+        background-color: #FFFAF0;
     }
 
     .header-container {
@@ -107,16 +107,44 @@
         color: #333;
         margin-bottom: 20px;
     }
+
+    .total-sales {
+        background-color: #FFE4E1;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        text-align: center;
+    }
+
+    .total-sales h3 {
+        margin: 0;
+        color: #FF4500;
+    }
+
+    @media (max-width: 600px) {
+        nav ul {
+            flex-direction: column;
+            text-align: center;
+        }
+
+        nav ul li {
+            margin: 10px 0;
+        }
+
+        .header-container {
+            flex-direction: column;
+        }
+    }
 </style>
 </head>
 <body>
 <header>
- <!-- bootstrap css -->
-      <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!-- bootstrap css -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
   
     <div class="header-container">
         <div class="logo-section">
-            <a href="index.html"><img src="images/logo1.png" alt="Logo"/></a>
+            <a href="index.html"><img src="lyssaalogo.png" alt="Logo"/></a>
         </div>
         <div class="nav-container">
             <nav>
@@ -151,6 +179,8 @@
             </tbody>
         </table>
     </section>
+
+    <section id="total-sales" class="total-sales">
+        <h3>Total Sales: <span id="totalSalesAmount">RM</span></h3>
+    </section>
 </main>
-</body>
-</html>
