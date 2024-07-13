@@ -1,3 +1,6 @@
+<%@ page import="java.sql.*" %>
+<%@ page import="java.util.*" %>
+<%@ page import="javax.servlet.http.*" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -9,16 +12,13 @@
             margin-top: 20px;
             background: #eee;
         }
-
         .ui-w-40 {
             width: 40px !important;
             height: auto;
         }
-
         .card {
             box-shadow: 0 1px 15px 1px rgba(52, 40, 104, .08);
         }
-
         .ui-product-color {
             display: inline-block;
             overflow: hidden;
@@ -26,7 +26,6 @@
             width: .875rem;
             height: .875rem;
             border-radius: 10rem;
-            -webkit-box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.15) inset;
             box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.15) inset;
             vertical-align: middle;
         }
@@ -54,59 +53,85 @@
                         </tr>
                     </thead>
                     <tbody>
+                        <%
+                            Connection conn = null;
+                            Statement stmt = null;
+                            ResultSet rs = null;
+
+                            try {
+                                // Get OrderID from session or request parameter
+                                HttpSession session = request.getSession();
+                                String orderID = (String) session.getAttribute("OrderID");
+                                if (orderID == null) {
+                                    orderID = "someDefaultOrderID"; // Replace with logic to get a valid OrderID
+                                }
+
+                                // Database connection
+                                Class.forName("com.mysql.cj.jdbc.Driver");
+                                conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/order_product", "root", "root");
+
+                                // Fetch data from Order_Product table
+                                String sql = "SELECT * FROM Order_Product WHERE OrderID='" + orderID + "'";
+                                stmt = conn.createStatement();
+                                rs = stmt.executeQuery(sql);
+
+                                while (rs.next()) {
+                                    String prodID = rs.getString("ProdID");
+                                    int quantity = rs.getInt("ProductQuantity");
+                                    double price = rs.getDouble("TotalAmount") / quantity;
+                                    double total = rs.getDouble("TotalAmount");
+
+                                    // Assuming product details are fetched from another table or hardcoded for simplicity
+                                    String productName = "";
+                                    String productDescription = "";
+                                    String productImage = "";
+
+                                    if (prodID.equals("Biscoff")) {
+                                        productName = "Biscoff Buttercookies";
+                                        productDescription = "Delicious buttery cookies with a hint of Biscoff flavor.";
+                                        productImage = "images/biscoff2.jpg";
+                                    } else if (prodID.equals("Semperit")) {
+                                        productName = "Semperit Susu";
+                                        productDescription = "Traditional milk cookies with a soft, melt-in-your-mouth texture.";
+                                        productImage = "images/semperitSusu.jpeg";
+                                    } else if (prodID.equals("Dahlia")) {
+                                        productName = "Dahlia Cookies";
+                                        productDescription = "Delightful flower-shaped cookies with a rich buttery taste.";
+                                        productImage = "images/dahlia.jpg";
+                                    }
+
+                        %>
                         <tr>
                             <td class="p-4">
                                 <div class="media align-items-center">
-                                    <img src="images/biscoff2.jpg" class="d-block ui-w-40 ui-bordered mr-4" alt="">
+                                    <img src="<%= productImage %>" class="d-block ui-w-40 ui-bordered mr-4" alt="">
                                     <div class="media-body">
-                                        <a href="#" class="d-block text-dark">Biscoff Buttercookies</a>
+                                        <a href="#" class="d-block text-dark"><%= productName %></a>
                                         <small>
-                                            <span class="text-muted">Description:</span> Delicious buttery cookies with a hint of Biscofff flavor.
+                                            <span class="text-muted">Description:</span> <%= productDescription %>
                                         </small>
                                     </div>
                                 </div>
                             </td>
-                            <td class="text-right font-weight-semibold align-middle p-4">RM 32.00</td>
-                            <td class="align-middle p-4"><input type="number" class="form-control text-center quantity" value="2" min="1"></td>
-                            <td class="text-right font-weight-semibold align-middle p-4 total">RM 64.00</td>
+                            <td class="text-right font-weight-semibold align-middle p-4">RM <%= price %></td>
+                            <td class="align-middle p-4"><input type="number" class="form-control text-center quantity" value="<%= quantity %>" min="1"></td>
+                            <td class="text-right font-weight-semibold align-middle p-4 total">RM <%= total %></td>
                             <td class="text-center align-middle px-0"><a href="#" class="shop-tooltip close float-none text-danger" title="" data-original-title="Remove">×</a></td>
                         </tr>
-
-                        <tr>
-                            <td class="p-4">
-                                <div class="media align-items-center">
-                                    <img src="images/semperitSusu.jpeg" class="d-block ui-w-40 ui-bordered mr-4" alt="">
-                                    <div class="media-body">
-                                        <a href="#" class="d-block text-dark">Semperit Susu</a>
-                                        <small>
-                                            <span class="text-muted">Description:</span> Traditional milk cookies with a soft, melt-in-your-mouth texture.
-                                        </small>
-                                    </div>
-                                </div>
-                            </td>
-                            <td class="text-right font-weight-semibold align-middle p-4">RM 28.00</td>
-                            <td class="align-middle p-4"><input type="number" class="form-control text-center quantity" value="1" min="1"></td>
-                            <td class="text-right font-weight-semibold align-middle p-4 total">RM 28.00</td>
-                            <td class="text-center align-middle px-0"><a href="#" class="shop-tooltip close float-none text-danger" title="" data-original-title="Remove">×</td>
-                        </tr>
-
-                        <tr>
-                            <td class="p-4">
-                                <div class="media align-items-center">
-                                    <img src="images/dahlia.jpg" class="d-block ui-w-40 ui-bordered mr-4" alt="">
-                                    <div class="media-body">
-                                        <a href="#" class="d-block text-dark">Dahlia Cookies</a>
-                                        <small>
-                                            <span class="text-muted">Description:</span> Delightful flower-shaped cookies with a rich buttery taste.
-                                        </small>
-                                    </div>
-                                </div>
-                            </td>
-                            <td class="text-right font-weight-semibold align-middle p-4">RM 35.00</td>
-                            <td class="align-middle p-4"><input type="number" class="form-control text-center quantity" value="1" min="1"></td>
-                            <td class="text-right font-weight-semibold align-middle p-4 total">RM 35.00</td>
-                            <td class="text-center align-middle px-0"><a href="#" class="shop-tooltip close float-none text-danger" title="" data-original-title="Remove">×</a></td>
-                        </tr>
+                        <%
+                                }
+                            } catch (Exception e) {
+                                e.printStackTrace();
+                            } finally {
+                                try {
+                                    if (rs != null) rs.close();
+                                    if (stmt != null) stmt.close();
+                                    if (conn != null) conn.close();
+                                } catch (SQLException se) {
+                                    se.printStackTrace();
+                                }
+                            }
+                        %>
                     </tbody>
                 </table>
             </div>
@@ -124,7 +149,7 @@
                     </div>
                     <div class="text-right mt-4">
                         <label class="text-muted font-weight-normal m-0">Total price</label>
-                        <div class="text-large"><strong id="total-price">RM 127.00</strong></div>
+                        <div class="text-large"><strong id="total-price">RM 0.00</strong></div>
                     </div>
                 </div>
             </div>
@@ -142,47 +167,42 @@
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 <script>
-    document.addEventListener('DOMContentLoaded', function() {
-        // Function to update the total price of a single row
-        function updateRowTotal(row) {
-            const price = parseFloat(row.querySelector('.text-right.font-weight-semibold.align-middle.p-4').innerText.replace('RM ', ''));
-            const quantity = parseInt(row.querySelector('.quantity').value);
-            const total = price * quantity;
-            row.querySelector('.total').innerText = 'RM ' + total.toFixed(2);
-            updateTotalPrice();
-        }
-
-        // Function to update the overall total price
+    document.addEventListener('DOMContentLoaded', function () {
+        // Function to update the total price
         function updateTotalPrice() {
-            const rows = document.querySelectorAll('tbody tr');
             let totalPrice = 0;
-            rows.forEach(row => {
-                const rowTotal = parseFloat(row.querySelector('.total').innerText.replace('RM ', ''));
-                totalPrice += rowTotal;
+            document.querySelectorAll('.total').forEach(function (element) {
+                const price = parseFloat(element.textContent.replace('RM', '').trim());
+                totalPrice += price;
             });
-            document.getElementById('total-price').innerText = 'RM ' + totalPrice.toFixed(2);
+            document.getElementById('total-price').textContent = 'RM ' + totalPrice.toFixed(2);
         }
 
-        // Add event listeners to quantity inputs
-        const quantityInputs = document.querySelectorAll('.quantity');
-        quantityInputs.forEach(input => {
-            input.addEventListener('change', function() {
-                const row = input.closest('tr');
-                updateRowTotal(row);
+        // Add event listeners to quantity input fields
+        document.querySelectorAll('.quantity').forEach(function (element) {
+            element.addEventListener('input', function () {
+                const quantity = parseInt(element.value);
+                const price = parseFloat(element.closest('tr').querySelector('.text-right').textContent.replace('RM', '').trim());
+                const totalElement = element.closest('tr').querySelector('.total');
+                totalElement.textContent = 'RM ' + (quantity * price).toFixed(2);
+                updateTotalPrice();
             });
         });
 
         // Add event listeners to remove buttons
         const removeButtons = document.querySelectorAll('.close');
         removeButtons.forEach(button => {
-            button.addEventListener('click', function(event) {
-                event.preventDefault();
+            button.addEventListener('click', function() {
                 const row = button.closest('tr');
                 row.remove();
                 updateTotalPrice();
             });
         });
+
+        // Initial calculation of the total price
+        updateTotalPrice();
     });
 </script>
+
 </body>
 </html>
