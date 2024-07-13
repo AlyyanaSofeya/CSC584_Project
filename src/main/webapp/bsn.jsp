@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<meta http-equiv="refresh" content="5;url=about.html"> <!-- Redirect after 5 seconds -->
+<meta http-equiv="refresh" content="5;url=index.html"> <!-- Redirect after 5 seconds -->
 <title>BSN Page</title>
 <style>
     body {
@@ -53,6 +53,6 @@
 	<h1>BSN</h1>
   </header>
 <h1>Transaction is successful</h1>
-<p>Redirecting back to homepage...</p>
+<p>Redirecting back to web...</p>
 </body>
 </html>
