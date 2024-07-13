@@ -3,14 +3,14 @@
 <!DOCTYPE html>
 <html>
 <head>
-<!-- basic -->
+      <!-- basic -->
       <meta charset="utf-8">
       <meta http-equiv="X-UA-Compatible" content="IE=edge">
       <!-- mobile metas -->
       <meta name="viewport" content="width=device-width, initial-scale=1">
       <meta name="viewport" content="initial-scale=1, maximum-scale=1">
       <!-- site metas -->
-      <title>honey</title>
+      <title>Contact Us</title>
       <meta name="keywords" content="">
       <meta name="description" content="">
       <meta name="author" content="">
@@ -27,6 +27,13 @@
       <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
+      
+       <!-- font awesome cdn link -->
+       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+       <!-- custom css file link -->
+       <link rel="stylesheet" href="style.css">
+
 <meta charset="UTF-8">
 <title>Contact Us Page</title>
 </head>
@@ -35,59 +42,25 @@
       <div class="loader_bg">
          <div class="loader"><img src="images/loading.gif" alt="#"/></div>
       </div>
-      <!-- end loader -->
-      <!-- header -->
-      <header>
-         <div class="header">
-            <div class="container-fluid">
-               <div class="row d_flex">
-                  <div class=" col-md-2 col-sm-3 col logo_section">
-                     <div class="full">
-                        <div class="center-desk">
-                           <div class="logo">
-                              
-                           </div>
-                        </div>
-                     </div>
-                  </div>
-                  <div class="col-md-8 col-sm-9">
-                     <nav class="navigation navbar navbar-expand-md navbar-dark ">
-                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample04" aria-controls="navbarsExample04" aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
-                        </button>
-                        <div class="collapse navbar-collapse" id="navbarsExample04">
-                           <ul class="navbar-nav mr-auto">
-                              <li class="nav-item ">
-                                 <a class="nav-link" href="index.html">Home</a>
-                              </li>
-                              <li class="nav-item">
-                                 <a class="nav-link" href="about.html">About</a>
-                              </li>
-                              <li class="nav-item">
-                                 <a class="nav-link" href="shop.html">Menu</a>
-                              </li>
-                              <li class="nav-item">
-                                 <a class="nav-link" href="quality.html">quality</a>
-                              </li>
-                              <li class="nav-item active">
-                                 <a class="nav-link" href="contact.html">Contact Us</a>
-                              </li>
-                           </ul>
-                        </div>
-                     </nav>
-                  </div>
-                  <div class="col-md-2">
-                     <ul class="email text_align_right">
-                        <li class="d_none"><a href="Javascript:void(0)"><i class="fa fa-user" aria-hidden="true"></i></a></li>
-                        <li class="d_none"> <a href="Javascript:void(0)"><i class="fa fa-search" style="cursor: pointer;" aria-hidden="true"></i></a> </li>
-                     </ul>
-                  </div>
-               </div>
-            </div>
-         </div>
-         <!-- end header inner -->
-      </header>
-      <!-- contact -->
+      <header class="header">
+    <a href="#" class="logo"> <i class="fas fa-shopping-basket"></i>Lyssaa Liciousss</a>
+
+    <nav class="navbar">
+        <a href="index.html">Home</a>
+        <a href="shop.html">Shop</a>
+        <a href="about.html">About</a>
+        <a href="#">Review</a>
+        <a href="#">Blog</a>
+        <a href="contactUs.jsp">Contact Us</a>
+    </nav>
+
+    <div class="icons">
+        <div id="menu-btn" class="fas fa-bars"></div>
+        <div id="search-btn" class="fas fa-search"></div>
+        <div id="cart-btn" class="fas fa-shopping-cart"></div>
+        <div id="login-btn" class="fas fa-user"></div>
+    </div>
+</header>
       <div class="contact">
          <div class="container">
             <div class="row ">
@@ -120,16 +93,14 @@
             </div>
          </div>
       </div>
-      <!-- contact -->  
-      <!--  footer -->
-      <footer>
+<footer>
          <div class="footer">
             <div class="container">
                <div class="row">
                   <div class="col-md-3 col-sm-6">
                      <div class="infoma text_align_left">
                         <h3>About</h3>
-                        <p class="ipsum">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sedconsectetur </p>
+                        <p class="ipsum">Lyssaa Liciousss Shop has something to satisfy every craving. Visit us and experience the joy of our delightful cookies today!</p>
                         <ul class="social_icon">
                            <li><a href="Javascript:void(0)"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
                            <li><a href="Javascript:void(0)"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
@@ -140,13 +111,14 @@
                   </div>
                   <div class="col-md-3 col-sm-6">
                      <div class="infoma">
-                        <h3>Adderess</h3>
+                        <h3>Address</h3>
                         <ul class="conta">
-                           <li>Healing Center, oo W Street name, <br>
-                              Loram ipusum 
-                           </li>
-                           <li>(+71) 8522369417 <br>(+71) 8522369417</li>
-                           <li> <a href="Javascript:void(0)"> demo@gmail.com</a></li>
+                           <li>No. 12, Jalan Anggerik Vanilla 31/AF,<br>
+								Kota Kemuning,<br>
+								40460 Shah Alam,<br>
+								Selangor, Malaysia</li>
+                           <li>+60 12-345 6789 <br> +60 13-987 6543</li>
+                           <li><a href="Javascript:void(0)"> LyssaaLiciousss@gmail.com</li>
                         </ul>
                      </div>
                   </div>
@@ -171,7 +143,7 @@
                                  <input class="newsl" placeholder="Your Name" type="text" name="Your Name">
                               </div>
                               <div class="col-md-12">
-                                 <input class="newsl" placeholder="Email" type="text" name="Email">
+                                 <input class="newsl" placeholder="Email" type="email" name="Email">
                               </div>
                               <div class="col-md-12">
                                  <button class="subsci_btn">subscribe</button>
@@ -186,7 +158,7 @@
                <div class="container">
                   <div class="row">
                      <div class="col-md-12">
-                        <p>© 2020 All Rights Reserved.  <a href="https://html.design/"> Free html Templates</a></p>
+                        <p>© 2020 All Rights Reserved. <a href="https://html.design/">Free html Templates</a></p>
                      </div>
                   </div>
                </div>
@@ -200,5 +172,7 @@
       <script src="js/jquery-3.0.0.min.js"></script>
       <!-- sidebar -->
       <script src="js/custom.js"></script>
+      <script src="main.js"></script>
+      
 </body>
 </html>
