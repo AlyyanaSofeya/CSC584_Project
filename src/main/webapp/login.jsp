@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta http-equiv="X-UA-Compatible" content="ie=edge">
-<title>Sign Up Form by Colorlib</title>
+<title>Login page</title>
 
 
 <!-- Font Icon -->
@@ -31,14 +31,14 @@
 					</div>
 
 					<div class="signin-form">
-						<h2 class="form-title">Sign up</h2>
+						<h2 class="form-title">Sign in</h2>
 						<form method="" action="" class="register-form"
 							id="login-form">
 							<div class="form-group">
 								<label for="username"><i
 									class="zmdi zmdi-account material-icons-name"></i></label> <input
 									type="text" name="username" id="username"
-									placeholder="Your Name" />
+									placeholder="Username" />
 							</div>
 							<div class="form-group">
 								<label for="password"><i class="zmdi zmdi-lock"></i></label> <input
@@ -56,17 +56,7 @@
 									class="form-submit" value="Log in" />
 							</div>
 						</form>
-						<div class="social-login">
-							<span class="social-label">Or login with</span>
-							<ul class="socials">
-								<li><a href="#"><i
-										class="display-flex-center zmdi zmdi-facebook"></i></a></li>
-								<li><a href="#"><i
-										class="display-flex-center zmdi zmdi-twitter"></i></a></li>
-								<li><a href="#"><i
-										class="display-flex-center zmdi zmdi-google"></i></a></li>
-							</ul>
-						</div>
+						
 					</div>
 				</div>
 			</div>
