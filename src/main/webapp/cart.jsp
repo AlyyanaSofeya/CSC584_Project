@@ -1,38 +1,36 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="UTF-8">
-<title>Shopping Cart</title>
-<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-<style>
-    body {
-        margin-top: 20px;
-        background: #eee;
-    }
+    <meta charset="UTF-8">
+    <title>Shopping Cart</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            margin-top: 20px;
+            background: #eee;
+        }
 
-    .ui-w-40 {
-        width: 40px !important;
-        height: auto;
-    }
+        .ui-w-40 {
+            width: 40px !important;
+            height: auto;
+        }
 
-    .card {
-        box-shadow: 0 1px 15px 1px rgba(52, 40, 104, .08);
-    }
+        .card {
+            box-shadow: 0 1px 15px 1px rgba(52, 40, 104, .08);
+        }
 
-    .ui-product-color {
-        display: inline-block;
-        overflow: hidden;
-        margin: .144em;
-        width: .875rem;
-        height: .875rem;
-        border-radius: 10rem;
-        -webkit-box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.15) inset;
-        box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.15) inset;
-        vertical-align: middle;
-    }
-</style>
+        .ui-product-color {
+            display: inline-block;
+            overflow: hidden;
+            margin: .144em;
+            width: .875rem;
+            height: .875rem;
+            border-radius: 10rem;
+            -webkit-box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.15) inset;
+            box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.15) inset;
+            vertical-align: middle;
+        }
+    </style>
 </head>
 <body>
 
@@ -59,62 +57,55 @@
                         <tr>
                             <td class="p-4">
                                 <div class="media align-items-center">
-                                    <img src="https://bootdey.com/img/Content/avatar/avatar1.png" class="d-block ui-w-40 ui-bordered mr-4" alt="">
+                                    <img src="images/biscoff2.jpg" class="d-block ui-w-40 ui-bordered mr-4" alt="">
                                     <div class="media-body">
-                                        <a href="#" class="d-block text-dark">Product 1</a>
+                                        <a href="#" class="d-block text-dark">Biscoff Buttercookies</a>
                                         <small>
-                                            <span class="text-muted">Color:</span>
-                                            <span class="ui-product-color ui-product-color-sm align-text-bottom" style="background:#e81e2c;"></span> &nbsp;
-                                            <span class="text-muted">Size: </span> EU 37 &nbsp;
-                                            <span class="text-muted">Ships from: </span> China
+                                            <span class="text-muted">Description:</span> Delicious buttery cookies with a hint of Biscofff flavor.
                                         </small>
                                     </div>
                                 </div>
                             </td>
-                            <td class="text-right font-weight-semibold align-middle p-4">$57.55</td>
-                            <td class="align-middle p-4"><input type="text" class="form-control text-center" value="2"></td>
-                            <td class="text-right font-weight-semibold align-middle p-4">$115.1</td>
-                            <td class="text-center align-middle px-0"><a href="#" class="shop-tooltip close float-none text-danger" title="" data-original-title="Remove">Ã—</a></td>
+                            <td class="text-right font-weight-semibold align-middle p-4">RM 32.00</td>
+                            <td class="align-middle p-4"><input type="number" class="form-control text-center quantity" value="2" min="1"></td>
+                            <td class="text-right font-weight-semibold align-middle p-4 total">RM 64.00</td>
+                            <td class="text-center align-middle px-0"><a href="#" class="shop-tooltip close float-none text-danger" title="" data-original-title="Remove">×</a></td>
                         </tr>
 
                         <tr>
                             <td class="p-4">
                                 <div class="media align-items-center">
-                                    <img src="https://bootdey.com/img/Content/avatar/avatar6.png" class="d-block ui-w-40 ui-bordered mr-4" alt="">
+                                    <img src="images/semperitSusu.jpeg" class="d-block ui-w-40 ui-bordered mr-4" alt="">
                                     <div class="media-body">
-                                        <a href="#" class="d-block text-dark">Product 2</a>
+                                        <a href="#" class="d-block text-dark">Semperit Susu</a>
                                         <small>
-                                            <span class="text-muted">Color:</span>
-                                            <span class="ui-product-color ui-product-color-sm align-text-bottom" style="background:#000;"></span> &nbsp;
-                                            <span class="text-muted">Storage: </span> 32GB &nbsp;
-                                            <span class="text-muted">Warranty: </span> Standard - 1 year &nbsp;
-                                            <span class="text-muted">Ships from: </span> China
+                                            <span class="text-muted">Description:</span> Traditional milk cookies with a soft, melt-in-your-mouth texture.
                                         </small>
                                     </div>
                                 </div>
                             </td>
-                            <td class="text-right font-weight-semibold align-middle p-4">$1049.00</td>
-                            <td class="align-middle p-4"><input type="text" class="form-control text-center" value="1"></td>
-                            <td class="text-right font-weight-semibold align-middle p-4">$1049.00</td>
-                            <td class="text-center align-middle px-0"><a href="#" class="shop-tooltip close float-none text-danger" title="" data-original-title="Remove">Ã—</a></td>
+                            <td class="text-right font-weight-semibold align-middle p-4">RM 28.00</td>
+                            <td class="align-middle p-4"><input type="number" class="form-control text-center quantity" value="1" min="1"></td>
+                            <td class="text-right font-weight-semibold align-middle p-4 total">RM 28.00</td>
+                            <td class="text-center align-middle px-0"><a href="#" class="shop-tooltip close float-none text-danger" title="" data-original-title="Remove">×</td>
                         </tr>
 
                         <tr>
                             <td class="p-4">
                                 <div class="media align-items-center">
-                                    <img src="https://bootdey.com/img/Content/avatar/avatar2.png" class="d-block ui-w-40 ui-bordered mr-4" alt="">
+                                    <img src="images/dahlia.jpg" class="d-block ui-w-40 ui-bordered mr-4" alt="">
                                     <div class="media-body">
-                                        <a href="#" class="d-block text-dark">Product 3</a>
+                                        <a href="#" class="d-block text-dark">Dahlia Cookies</a>
                                         <small>
-                                            <span class="text-muted">Ships from: </span> Germany
+                                            <span class="text-muted">Description:</span> Delightful flower-shaped cookies with a rich buttery taste.
                                         </small>
                                     </div>
                                 </div>
                             </td>
-                            <td class="text-right font-weight-semibold align-middle p-4">$20.55</td>
-                            <td class="align-middle p-4"><input type="text" class="form-control text-center" value="1"></td>
-                            <td class="text-right font-weight-semibold align-middle p-4">$20.55</td>
-                            <td class="text-center align-middle px-0"><a href="#" class="shop-tooltip close float-none text-danger" title="" data-original-title="Remove">Ã—</a></td>
+                            <td class="text-right font-weight-semibold align-middle p-4">RM 35.00</td>
+                            <td class="align-middle p-4"><input type="number" class="form-control text-center quantity" value="1" min="1"></td>
+                            <td class="text-right font-weight-semibold align-middle p-4 total">RM 35.00</td>
+                            <td class="text-center align-middle px-0"><a href="#" class="shop-tooltip close float-none text-danger" title="" data-original-title="Remove">×</a></td>
                         </tr>
                     </tbody>
                 </table>
@@ -129,19 +120,20 @@
                 <div class="d-flex">
                     <div class="text-right mt-4 mr-5">
                         <label class="text-muted font-weight-normal m-0">Discount</label>
-                        <div class="text-large"><strong>$20</strong></div>
+                        <div class="text-large"><strong>RM 0</strong></div>
                     </div>
                     <div class="text-right mt-4">
                         <label class="text-muted font-weight-normal m-0">Total price</label>
-                        <div class="text-large"><strong>$1164.65</strong></div>
+                        <div class="text-large"><strong id="total-price">RM 127.00</strong></div>
                     </div>
                 </div>
             </div>
 
             <div class="float-right">
-                <button type="button" class="btn btn-lg btn-default md-btn-flat mt-2 mr-3">Back to shopping</button>
-                <button type="button" class="btn btn-lg btn-primary mt-2">Checkout</button>
+                <a href="#" class="btn btn-lg btn-outline-primary md-btn-flat mt-2 mr-3">Continue Shopping</a>
+                <a href="#" class="btn btn-lg btn-primary mt-2">Checkout</a>
             </div>
+
         </div>
     </div>
 </div>
@@ -149,6 +141,48 @@
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        // Function to update the total price of a single row
+        function updateRowTotal(row) {
+            const price = parseFloat(row.querySelector('.text-right.font-weight-semibold.align-middle.p-4').innerText.replace('RM ', ''));
+            const quantity = parseInt(row.querySelector('.quantity').value);
+            const total = price * quantity;
+            row.querySelector('.total').innerText = 'RM ' + total.toFixed(2);
+            updateTotalPrice();
+        }
 
+        // Function to update the overall total price
+        function updateTotalPrice() {
+            const rows = document.querySelectorAll('tbody tr');
+            let totalPrice = 0;
+            rows.forEach(row => {
+                const rowTotal = parseFloat(row.querySelector('.total').innerText.replace('RM ', ''));
+                totalPrice += rowTotal;
+            });
+            document.getElementById('total-price').innerText = 'RM ' + totalPrice.toFixed(2);
+        }
+
+        // Add event listeners to quantity inputs
+        const quantityInputs = document.querySelectorAll('.quantity');
+        quantityInputs.forEach(input => {
+            input.addEventListener('change', function() {
+                const row = input.closest('tr');
+                updateRowTotal(row);
+            });
+        });
+
+        // Add event listeners to remove buttons
+        const removeButtons = document.querySelectorAll('.close');
+        removeButtons.forEach(button => {
+            button.addEventListener('click', function(event) {
+                event.preventDefault();
+                const row = button.closest('tr');
+                row.remove();
+                updateTotalPrice();
+            });
+        });
+    });
+</script>
 </body>
 </html>
