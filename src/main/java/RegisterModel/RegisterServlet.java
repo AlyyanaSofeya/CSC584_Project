@@ -30,6 +30,8 @@ public class RegisterServlet extends HttpServlet{
         	PreparedStatement ps = con.prepareStatement("insert into customer(CustName, Username, CustEmail, CustPhoneNum, Pass) values(?,?,?,?,?)");
         	
         	
+        	
+        	
         }catch (Exception e) {
         	
         }
