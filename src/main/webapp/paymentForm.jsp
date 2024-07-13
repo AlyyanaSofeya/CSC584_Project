@@ -1,7 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" 
     pageEncoding="UTF-8"%>
 <%@ page import="java.util.List" %>
-<%@ page import="paymentProject.OrderProduct" %>
+<%@ page import="java.paymentServlet.OrderProduct1.*" %>
 
 <!DOCTYPE html>
 <html>
@@ -232,29 +232,7 @@
 
     <div class="column">
         <div class="cart">
-            <h2>Cart Details for Order ID: ${orderId}</h2>
-            <%
-                Object cartDetailsObj = request.getAttribute("cartDetails");
-                List<OrderProduct> cartDetails = null;
-                if (cartDetailsObj instanceof List) {
-                    cartDetails = (List<OrderProduct>) cartDetailsObj;
-                }
-
-                if (cartDetails != null && !cartDetails.isEmpty()) {
-                    for (OrderProduct product : cartDetails) {
-            %>
-                        <p>Product ID: <%= product.getProdID() %></p>
-                        <p>Quantity: <%= product.getProductQuantity() %></p>
-                        <p>Total Price: $<%= product.getTotalAmount() %></p>
-                        <hr>
-            <%
-                    }
-                } else {
-            %>
-                    <p>No items found for this order.</p>
-            <%
-                }
-            %>
+            <h2>Cart Details for Order ID: 
             <label>Total Charge:</label>
             <input type="text" id="totalCharge" name="totalCharge" value="RM 0.00" readonly>
         </div>
