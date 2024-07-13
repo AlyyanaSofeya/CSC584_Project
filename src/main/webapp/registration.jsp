@@ -24,12 +24,17 @@
 					<div class="signup-form">
 						<h2 class="form-title">Sign up</h2>
 					
-						<form method="" action="" class="register-form"
+						<form method="post" action="register" class="register-form"
 							id="register-form">
 							<div class="form-group">
 								<label for="name"><i
 									class="zmdi zmdi-account material-icons-name"></i></label> <input
 									type="text" name="name" id="name" placeholder="Your Name" />
+							</div>
+							<div class="form-group">
+								<label for="username"><i
+									class="zmdi zmdi-account material-icons-name"></i></label> <input
+									type="text" name="username" id="username" placeholder="Your Username" />
 							</div>
 							<div class="form-group">
 								<label for="email"><i class="zmdi zmdi-email"></i></label> <input
