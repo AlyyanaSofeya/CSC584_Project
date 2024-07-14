@@ -45,6 +45,7 @@ public class RegisterServlet extends HttpServlet{
             user.setPhoneNumber(contact);
         	
             boolean status1 = up.insertNew(user);
+            
             boolean status2 = user.validate();
             
             dispatcher = request.getRequestDispatcher("registration.jsp");
