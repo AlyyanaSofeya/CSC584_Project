@@ -1,6 +1,6 @@
 package RegisterModel;
 
-public class user {
+public class User {
 	    private String name;
 	    private String phoneNumber;
 	    private String email;
@@ -48,5 +48,11 @@ public class user {
 	    public void setPassword(String password) {
 	        this.password = password;
 	    }
-
+	    
+	    public boolean validate() {
+	    if(password.isEmpty())
+	    	return false;
+	    else
+	    	return true;
+	    }
 }

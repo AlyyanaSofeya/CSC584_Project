@@ -6,54 +6,37 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 
 public class userDAO {
-	private String jdbcURL = "jdbc:mysql://localhost:3306/yourdatabase";
-    private String jdbcUsername = "root";
-    private String jdbcPassword = "password";
-    private Connection jdbcConnection;
-
-    protected void connect() throws Exception {
-        if (jdbcConnection == null || jdbcConnection.isClosed()) {
-            Class.forName("com.mysql.jdbc.Driver");
-            jdbcConnection = DriverManager.getConnection(jdbcURL, jdbcUsername, jdbcPassword);
-        }
-    }
-
-    protected void disconnect() throws Exception {
-        if (jdbcConnection != null && !jdbcConnection.isClosed()) {
-            jdbcConnection.close();
-        }
-    }
-
-    public boolean registerUser(user user) throws Exception {
-        String sql = "INSERT INTO users (name, phoneNumber, email, username, password) VALUES (?, ?, ?, ?, ?)";
-        connect();
-
-        PreparedStatement statement = jdbcConnection.prepareStatement(sql);
-        statement.setString(1, user.getName());
-        statement.setString(2, user.getPhoneNumber());
-        statement.setString(3, user.getEmail());
-        statement.setString(4, user.getUsername());
-        statement.setString(5, user.getPassword());
-
-        boolean rowInserted = statement.executeUpdate() > 0;
-        statement.close();
-        disconnect();
-        return rowInserted;
-    }
-
-    public boolean loginUser(String username, String password) throws Exception {
-        String sql = "SELECT * FROM users WHERE username = ? and password = ?";
-        connect();
-
-        PreparedStatement statement = jdbcConnection.prepareStatement(sql);
-        statement.setString(1, username);
-        statement.setString(2, password);
-
-        ResultSet resultSet = statement.executeQuery();
-        boolean valid = resultSet.next();
-        resultSet.close();
-        statement.close();
-        disconnect();
-        return valid;
+	
+	public boolean insertNew(User user)throws SQLException{
+		boolean status = false;
+		try {
+		Class.forName("com.mysql.cj.jdbc.Driver");
+        con = DriverManager.getConnection("jdbc:mysql://localhost:3306/project?useSSL=false","root","root");
+        PreparedStatement ps = con.prepareStatement("insert into customer(CustName, Username, CustEmail, CustPhoneNum, Pass) values(?,?,?,?,?)");
+        
+        String n = user.getName();
+        String u = user.getUsername();
+        String e = user.getEmail();
+        String p = user.getPassword();
+        String c = user.getPhoneNumber();
+        
+        ps.setString(1, n);
+        ps.setString(2, u);
+        ps.setString(3, e);
+        ps.setString(4, c);
+        ps.setString(5, p);
+        
+        int rowCount = ps.executeUpdate();
+        
+        if(rowCount > 0) 
+            status = true;
+        
+        con.close();
+        }catch (Exception e) {
+        	System.out.println(e);
+		
+	}
+		return status;
+	
     }
 }
