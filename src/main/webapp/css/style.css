@@ -1784,3 +1784,63 @@ media queries
 } 
 }
 /**  end copied code **/
+
+
+/**  number section start **/
+
+/* .number {
+	position: relative;
+	padding: 3rem 9%;
+}
+
+.number .number-row {
+    width: 100%;
+    background: var(--text-color); Adjust as needed
+    display: flex;
+    justify-content: space-around; Ensure items are evenly spaced
+    align-items: center;
+    padding: 2rem 0; Adjust padding as needed
+}
+
+.number-row .num-col {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 1rem;
+    background: var(--main-color); Adjust background as needed
+    border-radius: 0.5rem; Add some rounding to match the design
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1); Add a slight shadow
+}
+
+.number-row .num-col .icon {
+    width: 65px;
+    height: 65px;
+    line-height: 65px;
+    text-align: center;
+    background: #fff; Ensure the icon background is white
+    color: var(--main-color); Adjust icon color
+    border-radius: 50%;
+    margin-bottom: 10px; Add spacing between icon and text
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.number-row .num-col .icon i{
+	font-size: 1.6rem;
+}
+
+.number-row .num-col h4 {
+    font-size: 1.4rem;
+    color: #fff; Ensure header text color is white
+    margin: 0;
+    padding-bottom: 0.5rem; Add spacing below header
+    text-transform: uppercase;
+}
+
+.number-row .num-col span {
+    font-size: 2.4rem;
+    font-weight: bold;
+    color: #fff; Ensure number color is white
+} */
