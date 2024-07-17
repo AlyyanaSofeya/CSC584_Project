@@ -46,5 +46,36 @@
     <servlet-name>CartOrderServlet</servlet-name>
     <url-pattern>/CartOrderServlet</url-pattern>
   </servlet-mapping>
-    
+  <servlet>
+    <servlet-name>SignUpServlet</servlet-name>
+    <servlet-class>RegisterModel.SignUpServlet</servlet-class>
+</servlet>
+<servlet-mapping>
+    <servlet-name>SignUpServlet</servlet-name>
+    <url-pattern>/SignUpServlet</url-pattern>
+</servlet-mapping>
+<servlet>
+    <servlet-name>SignInServlet</servlet-name>
+    <servlet-class>RegisterModel.SignInServlet</servlet-class>
+</servlet>
+<servlet-mapping>
+    <servlet-name>SignInServlet</servlet-name>
+    <url-pattern>/SignInServlet</url-pattern>
+</servlet-mapping>
+<servlet>
+    <servlet-name>ForgotPassServlet</servlet-name>
+    <servlet-class>RegisterModel.ForgotPassServlet</servlet-class>
+</servlet>
+<servlet-mapping>
+    <servlet-name>ForgotPassServlet</servlet-name>
+    <url-pattern>/ForgotPassServlet</url-pattern>
+</servlet-mapping>
+<servlet>
+    <servlet-name>NewPassword</servlet-name>
+    <servlet-class>RegisterModel.NewPassword</servlet-class>
+</servlet>
+<servlet-mapping>
+    <servlet-name>NewPassword</servlet-name>
+    <url-pattern>/NewPassword</url-pattern>
+</servlet-mapping>
 </web-app>
