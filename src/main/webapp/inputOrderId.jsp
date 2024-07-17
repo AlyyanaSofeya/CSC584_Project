@@ -1,4 +1,4 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -31,7 +31,7 @@
             border: 1px solid #ddd; /* Light border */
             border-radius: 5px; /* Rounded corners */
         }
-        input[type="submit"] {
+        input[type="submit"], .back-button {
             background-color: #d28f00; /* Honey theme button color */
             color: #333; /* Dark text color for visibility */
             border: none; /* No border */
@@ -39,9 +39,14 @@
             border-radius: 5px; /* Rounded corners */
             cursor: pointer; /* Pointer on hover */
             font-size: 16px; /* Larger text */
+            text-align: center;
         }
-        input[type="submit"]:hover {
+        input[type="submit"]:hover, .back-button:hover {
             background-color: #b27300; /* Darker shade on hover */
+        }
+        .back-button {
+            margin-top: 10px; /* Space above the back button */
+            text-decoration: none; /* No underline */
         }
     </style>
 </head>
@@ -50,8 +55,8 @@
     <form action="receiptServlet" method="get">
         <label for="orderId">Order ID:</label>
         <input type="text" id="orderId" name="orderId" required/><br>
-        <input type="submit" value="Get Receipt"/>
-        
+        <input type="submit" value="Get Receipt"/><br>
     </form>
+    <a href="homepage.jsp" class="back-button">Go Back to Home Page</a>
 </body>
 </html>
