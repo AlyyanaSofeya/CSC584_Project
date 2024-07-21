@@ -696,7 +696,7 @@ ul.conta_top li a {
 
 
 /** honey_bg **/
-
+/* 
 .honey_bg {
      margin: 0 auto;
      display: block;
@@ -711,7 +711,7 @@ ul.conta_top li a {
      display: block;
 }
 
-
+ */
 /** end honey_bg **/
 
 
@@ -989,7 +989,7 @@ section{
 }
 
 .heading{
-    background: url("images/abtus.jpg") no-repeat;
+    background: url("images/homeBG.jpg") no-repeat;
     background-size:cover;
     background-position: center;
     text-align: center;
