@@ -1097,7 +1097,7 @@ section{
     background-position: center;
     position: relative;
 }
- .home .slides-container .slide{
+ .home .s-container .slide{
     display:flex;
     align-items: center;
     flex-wrap: wrap;
@@ -1131,14 +1131,14 @@ section{
 }
 
 .home .slides-container .slide .img img{
-    width: 100%;
+    width: 20%;
     animation: fadeUp .4s linear;
 }
 
 .home #next-slide,
 .home #prev-slide{
     position: absolute;
-    top: 50%;
+    top: 10%;
     transform: translateY(-50%);
     height: 5rem;
     width: 5rem;
@@ -1783,9 +1783,25 @@ media queries
     }
 } 
 }
+
+
 /**  end copied code **/
 
+/* Add this block at the end of your existing CSS to override previous styles */
+/* .banner-container, .home .slides-container .slide .content, .home .slides-container .slide .img {
+    padding: 0;
+    margin: 0;
+}
 
+.home, .home .s-container, .home .slides-container {
+    padding: 0;
+    margin: 0;
+}
+
+.home .slides-container {
+    margin-top: -2rem; Adjust the value as needed
+}
+ */
 /**  number section start **/
 
 /* .number {
